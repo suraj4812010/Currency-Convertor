@@ -8,12 +8,12 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: burlywood;
+    background-color: rgb(235, 194, 141);
 
 }
 
 .container {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     padding: 2rem;
     border-radius: 1rem;
     min-height: 45vh;
