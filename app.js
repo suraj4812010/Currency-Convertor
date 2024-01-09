@@ -66,24 +66,24 @@ btn.addEventListener("click",  (evt) => {
 let updateExchangeRate = async () => {
     let amount = document.querySelector(".amount input");
     let amtValue = amount.value;
-    console.log("amtvalue = ",amtValue);
+    // console.log("amtvalue = ",amtValue);
 
     if(amtValue === "" || amtValue < 1){
         amtValue = 1;
         amount.value = "1";
     }
 
-    console.log("From :", fromCurr.value, "To :", toCurr.value);
+    // console.log("From :", fromCurr.value, "To :", toCurr.value);
 
     const URL = `${BASE_URL}/${fromCurr.value.toLowerCase()}/${toCurr.value.toLowerCase()}.json`;
 
     let response = await fetch(URL);
     let data = await response.json();
     let rate = data[toCurr.value.toLowerCase()];
-    console.log("rate :",rate);
+    // console.log("rate :",rate);
 
     let finalAmt = amtValue * rate;
-    console.log("final amount = ",finalAmt);
+    // console.log("final amount = ",finalAmt);
 
     msg.innerText = `${amtValue} ${fromCurr.value} = ${finalAmt} ${toCurr.value}` ;
 }
